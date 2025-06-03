@@ -1,1 +1,1 @@
-# kibdros
+# Algoritmēšanas un programmēšanas pamati
