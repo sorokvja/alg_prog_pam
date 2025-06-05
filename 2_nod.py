@@ -87,7 +87,6 @@ def get_variables():
 def do_action(a, b, n):
     eur = a * n
     cents = b * n
-    #print(f"eur_a: {eur}, cents_b: {cents}")
     eur += cents // 100
     cents %= 100
     print(f"Par {n} kūkam ir jāmaksā {eur} Eiro un {cents} centi")
@@ -129,4 +128,30 @@ def main():
 main()
 
 #2.6 Uzdevuma kods
+def get_variables():
+    # https://lv.wikipedia.org/wiki/Re%C4%81ls_skaitlis
+    while True:
+        try:
+            n_float = float(input('Ievadiet reālo skaitli ==> '))
+            return n_float
+        except ValueError:
+            print("Kļūda: ievadīta vērtība neesot reāls skaitlis!")
+
+def do_action(skaitlis):
+    n = skaitlis
+    #n = abs(skaitlis)
+    if n < 0:
+        n *= -1
+    a, b = int(n), n
+    b -= a
+    a %= 10
+    b *= 10
+    c = int(b)
+    print(f"Cipari: {a} un {c}")
+
+def main():
+    n = get_variables()
+    do_action(n)
+
+main()
 
