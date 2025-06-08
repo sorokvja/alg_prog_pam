@@ -1,1 +1,1 @@
-# Algoritmēšanas un programmēšanas pamati
+# Algor_un_progr_pam

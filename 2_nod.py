@@ -79,6 +79,7 @@ main()
 
 #2.4 Uzdevuma kods
 def get_variables():
+    print("Ievadiet vienas kūkas cenu un kūku skaitu:")
     int_eur = int(input('Eiro ==> '))
     int_cent = int(input('Centi ==> '))
     int_cookies = int(input('Kūku skaits ==> '))
@@ -92,7 +93,6 @@ def do_action(a, b, n):
     print(f"Par {n} kūkam ir jāmaksā {eur} Eiro un {cents} centi")
 
 def main():
-    print("Ievadiet vienas kūkas cenu un kūku skaitu:")
     a, b, n = get_variables()
     do_action(a, b, n)
 

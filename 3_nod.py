@@ -1,3 +1,26 @@
+# 3.1. Uzdevuma kods
+def get_variables():
+    int_a = int(input('Ievadiet veselo skaitli "a" ==> '))
+    int_b = int(input('Ievadiet veselo skaitli "b" ==> '))
+    int_c = int(input('Ievadiet veselo skaitli "c" ==> '))
+    #print(f"Skaitlis a = {int_a}, skaitlis b = {int_b}, skaitlis c = {int_c}")
+    return int_a, int_b, int_c
+
+def do_action(a, b, c):
+    if a == b and a == c:
+        print(3)
+    elif a == b or a == c or b == c:
+        print(2)
+    else:
+        print(1)
+
+def main():
+    a, b, c = get_variables()
+    do_action(a, b, c)
+
+main()
+
+# 3.2. Uzdevuma kods
 def get_variables():
     while True:
         try:
@@ -28,3 +51,6 @@ def main():
     do_action(a)
 
 main()
+
+# 3.3. Uzdevuma kods
+
