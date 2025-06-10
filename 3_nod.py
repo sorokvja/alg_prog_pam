@@ -102,8 +102,8 @@ def get_variables():
             print("Kļūda: ievadiet ātrumu izmantojot ciparus!")
 
 def do_action(do_param, sp):
-    #print(do_param, sp)
-    if sp <= do_param["speed"]:
+    #print(f"do_param: {do_param}, sp: {sp}")
+    if do_param["speed"] <= sp:
         print(0)
     else:
         if (sp - do_param["speed"]) <= 20:
@@ -111,9 +111,7 @@ def do_action(do_param, sp):
         else:
             print(2)
 
-
 def main():
-    speed_apdz, speed_neapdz = 50, 90
     parameters = get_variables()
     if parameters["location"]:
         speed = 50
@@ -124,4 +122,5 @@ def main():
     do_action(parameters, speed)
 
 main()
+
 
