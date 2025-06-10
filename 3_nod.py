@@ -53,4 +53,27 @@ def main():
 main()
 
 # 3.3. Uzdevuma kods
+def get_variables():
+    n = str(input('Ievadiet lietotāja vārdu ==> '))
+    p = str(input('Ievadiet paroli ==> '))
+    return n, p
+
+def do_action(n, p, users_dict):
+    for key in users_dict:
+        if key == n:
+            if users_dict[key] == p:
+                print("Laipni lūdzam, Jūs varat turpināt darbu ar programmu!")
+            else:
+                print("Parole ir nepareiza!")
+        else:
+            print("Šāds lietotājs neeksistē!")
+
+def main():
+    registered_users = {"admin": "12345", }
+    usr_name, usr_passw = get_variables()
+    do_action(usr_name, usr_passw, registered_users)
+
+main()
+
+# 3.4. Uzdevuma kods
 

@@ -1,30 +1,38 @@
+def get_boolean_input(prompt):
+    while True:
+        user_input = input(prompt).lower()
+        if user_input in ("y", "yes"):
+            return True
+        elif user_input in ("n", "no"):
+            return False
+        else:
+            print("Kļūda: var ievadīt y, yes, n, no.")
+
 def get_variables():
+    get_param = {}
     while True:
         try:
-            atz_int = int(input('Ievadiet atzīmi, veselo skaitli no 1. līdz 100. ==> '))
-            if atz_int < 1 or atz_int > 100:
-                print("Kļūda #1: lūdzu ievadiet skaitli no 1. līdz 100.!")
+            get_param["speed"] = int(input('Ievadiet braukšanas ātrumu ==> '))
+            if get_param["speed"] < 0:
+                print("Kļūda: ātrums nevar būt negatīvs skaitlis!")
                 continue
-            return atz_int
+            else:
+                get_param["location"] = get_boolean_input("Vai ceļš atrodas apdzīvotā vietā? (Y/N) ==> ")
+                get_param["birthday"] = get_boolean_input("Vai  autovadītāja dzimšanas diena? (Y/N) ==> ")
+                return get_param
         except ValueError:
-            print("Kļūda #2: ievadīta vērtība neesot vesels skaitlis!")
+            print("Kļūda: ievadiet ātrumu izmantojot ciparus!")
 
-def do_action(a):
-    if a >= 90:
-        print("A")
-    elif 80 <= a < 90:
-        print("B")
-    elif 70 <= a < 80:
-        print("C")
-    elif 60 <= a < 70:
-        print("D")
-    elif 50 <= a < 60:
-        print("E")
-    else:
-        print("F")
+def do_action(do_param, sp_a, sp_na):
+    print(do_param)
+    if do_param["birthday"]:
+        sp_a += 5
+        sp_na += 5
+    print(sp_a, sp_na)
 
 def main():
-    a = get_variables()
-    do_action(a)
+    parameters = get_variables()
+    speed_apdz, speed_neapdz = 50, 90
+    do_action(parameters, speed_apdz, speed_neapdz)
 
 main()
