@@ -28,7 +28,7 @@ def do_action(do_param, sp):
     if do_param["speed"] <= sp:
         print(0)
     else:
-        if (sp - do_param["speed"]) <= 20:
+        if (do_param["speed"] - sp) <= 20:
             print(1)
         else:
             print(2)
