@@ -23,16 +23,26 @@ def get_variables():
         except ValueError:
             print("Kļūda: ievadiet ātrumu izmantojot ciparus!")
 
-def do_action(do_param, sp_a, sp_na):
-    print(do_param)
-    if do_param["birthday"]:
-        sp_a += 5
-        sp_na += 5
-    print(sp_a, sp_na)
+def do_action(do_param, sp):
+    #print(do_param, sp)
+    if sp <= do_param["speed"]:
+        print(0)
+    else:
+        if (sp - do_param["speed"]) <= 20:
+            print(1)
+        else:
+            print(2)
+
 
 def main():
-    parameters = get_variables()
     speed_apdz, speed_neapdz = 50, 90
-    do_action(parameters, speed_apdz, speed_neapdz)
+    parameters = get_variables()
+    if parameters["location"]:
+        speed = 50
+    else:
+        speed = 90
+    if parameters["birthday"]:
+        speed += 5
+    do_action(parameters, speed)
 
 main()
