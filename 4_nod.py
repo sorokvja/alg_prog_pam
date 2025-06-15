@@ -51,3 +51,5 @@ def main():
             user_wins += 1
 
 main()
+
+# 4.2. Uzdevuma kods
