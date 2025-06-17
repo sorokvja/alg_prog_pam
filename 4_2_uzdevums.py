@@ -35,15 +35,6 @@ def hundred_points_game():
         print(f'Dators    | {pc_rolls[0]}  {pc_rolls[1]} | {players_scores["PC"]}\n')
     print("Spēle beigusies!")
     return players_scores
-    max_score = max(players_scores.values())
-    for player, score in players_scores.items():
-        if score == max_score:
-            winner.append(player)
-    if len(winner) > 1:
-        print("Vairākiem spēlētājiem ir vienāds rezultāts, mēģiniet vēlreiz!")
-    else:
-        print(f'{winner[0]} uzvarēja!\nIegūtie punkti:')
-        print(f'')
 
 def the_winner(players_scores):
     winner = []
