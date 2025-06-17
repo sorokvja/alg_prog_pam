@@ -17,22 +17,23 @@ def dice_roll(dice_min_val, dice_max_val, rolls):
 '''
 def two_player_game():
     rolls_to_make = 6
-    players = ("A", "B")
-    scores = {}
-    for player in players:
+    players_scores = {"A": 0, "B": 0}
+    winner = []
+    for player in players_scores:
         print(f"Spēlētājs {player} met kauliņu:")
         roll_list = random.choices(range(1, 7), k=rolls_to_make)
-        player_score = sum(roll_list)
-        scores[player] = player_score
         for count, item in enumerate(roll_list, start=1):
             print(f"{count}. metiens: {item}")
-        print(f"Kopā punkti spēlētājam {player}: {player_score}\n")
-    if scores[players[0]] == scores[players[1]]:
-        print(f"Abiem spēlētājiem ir vienāds rezultāts, mēģiniet vēlreiz!")
-    elif scores[players[0]] > scores[players[1]]:
-        print(f"Uzvar spēlētājs {players[0]}")
+        players_scores[player] = sum(roll_list)
+        print(f"Kopā punkti spēlētājam {player}: {players_scores[player]}\n")
+    max_score = max(players_scores.values())
+    for player, score in players_scores.items():
+        if score == max_score:
+            winner.append(player)
+    if len(winner) > 1:
+        print("Vairākiem spēlētājiem ir vienāds rezultāts, mēģiniet vēlreiz!")
     else:
-        print(f"Uzvar spēlētājs {players[1]}")
+        print(f"Uzvar spēlētājs {winner[0]}")
 
 def hundred_points_game():
     pass
