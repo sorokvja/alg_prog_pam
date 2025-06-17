@@ -9,12 +9,7 @@ def get_input():
         if user_input in allowed_input:
             return user_input
         print("\nKļūda: mēģieniet ievadīt 1, 2, Q vai q.")
-'''
-def dice_roll(dice_min_val, dice_max_val, rolls):
-    rolls_performed = {}
 
-    return random.randint(min_val, max_val)
-'''
 def two_player_game():
     rolls_to_make = 6
     players_scores = {"A": 0, "B": 0}
