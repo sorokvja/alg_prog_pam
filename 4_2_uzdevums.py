@@ -38,29 +38,8 @@ def hundred_points_game():
                 players_scores[player] += sum(player_rolls)
             print(f'{player:<8} | {player_rolls[0]}  {player_rolls[1]} | {players_scores[player]}')
         print('')
-            #pc_rolls = random.choices(range(1, 7), k=2)
-            #players_scores["PC"] += sum(pc_rolls)
-            #print(f'Dators    | {pc_rolls[0]}  {pc_rolls[1]} | {players_scores["PC"]}\n')
     print("Spēle beigusies!")
     return players_scores
-    '''
-    while players_scores["User"] < 100 and players_scores["PC"] < 100:
-        user_rolls = random.choices(range(1, 7), k=2)
-        if user_rolls[0] == 1 and user_rolls[1] == 1:
-            players_scores["User"] = 0
-        elif user_rolls[0] == 1 or user_rolls[1] == 1:
-            players_scores["User"] += 0
-        elif user_rolls[0] == user_rolls[1]:
-            players_scores["User"] += sum(user_rolls) * 2
-        else:
-            players_scores["User"] += sum(user_rolls)
-        print(f'Lietotājs | {user_rolls[0]}  {user_rolls[1]} | {players_scores["User"]}')
-        pc_rolls = random.choices(range(1, 7), k=2)
-        players_scores["PC"] += sum(pc_rolls)
-        print(f'Dators    | {pc_rolls[0]}  {pc_rolls[1]} | {players_scores["PC"]}\n')
-    print("Spēle beigusies!")
-    return players_scores
-    '''
 
 def the_winner(players_scores):
     winner = []
