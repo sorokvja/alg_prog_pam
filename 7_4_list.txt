@@ -1,0 +1,4 @@
+[('maize', 0.85), ('piens', 1.05), ('sviests', 1.45),
+ ('siers', 1.5), ('olas', 2.5), ('kafija', 6.99),
+ ('kakao', 1.5), ('sula', 1.64), ('jogurts', 0.6),
+ ('avenes', 2.7), ('zemenes', 3.5), ('mellenes', 1.8)]
