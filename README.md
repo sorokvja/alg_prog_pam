@@ -1,1 +1,2 @@
-# Algor_un_progr_pam
+# alg_prog_pam
+Some tasks done for a school projects. 
